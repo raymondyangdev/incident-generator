@@ -18,10 +18,11 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 15px auto;
     padding: 0 40px;
     overflow: auto;
-    background-color: yellow;
+    background-color: rgba(245, 245, 245, 0.705);
+    border-radius: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -29,13 +30,18 @@ body {
 /* Nav */
 
 .navbar {
-    background-color: rgba(0, 0, 255, 0.2);
-    height: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 45px 10px 15px;
+}
+
+#brand {
+    color: white;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 li {
@@ -58,10 +64,16 @@ label {
     padding-bottom: 3px;
 }
 
+input {
+    height: 22px;
+}
+
 input,
 textarea {
     max-width: 70%;
     padding: 3px 0 0 4px;
+    border-radius: 5px;
+    border: none;
 }
 
 textarea {
@@ -70,15 +82,27 @@ textarea {
 
 #resetBtn {
     margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
 #form-reset {
     flex-direction: row;
 }
 
-/* Title */
+/* Outputs */
 .output {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+#title {
+    margin-bottom: 10px;
+}
+
