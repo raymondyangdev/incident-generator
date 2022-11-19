@@ -1,0 +1,84 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: rgb(164, 0, 255);
+    background: linear-gradient(
+            130deg,
+            rgba(164, 0, 255, 1) 0%,
+            rgba(0, 174, 255, 1) 100%
+        )
+        fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    overflow: auto;
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Nav */
+
+.navbar {
+    background-color: rgba(0, 0, 255, 0.2);
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* Form */
+.form-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+label {
+    padding-bottom: 3px;
+}
+
+input,
+textarea {
+    max-width: 70%;
+    padding: 3px 0 0 4px;
+}
+
+textarea {
+    height: 128px;
+}
+
+#resetBtn {
+    margin-top: 10px;
+}
+
+#form-reset {
+    flex-direction: row;
+}
+
+/* Title */
+.output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
