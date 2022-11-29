@@ -136,14 +136,12 @@ textarea {
     }
 
     .output {
-        padding-left: 50px;
+        margin-left: 20px;
     }
-}
 
-@media screen and (max-width: 600px) {
-
-
-    .output {
-        padding-left: 20px;
+    .output-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 }
