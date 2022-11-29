@@ -124,7 +124,7 @@ textarea {
 
 /* Responsive queries */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
     .form-input > label {
         white-space: pre;
     }
@@ -140,10 +140,7 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-    .form-input > input,
-    .form-input > textarea {
-        min-width: 100%;
-    }
+
 
     .output {
         padding-left: 20px;
