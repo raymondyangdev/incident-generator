@@ -68,6 +68,11 @@ input {
     height: 22px;
 }
 
+.form-input > input,
+.form-input > textarea {
+    min-width: 200px;
+}
+
 input,
 textarea {
     max-width: 70%;
@@ -104,5 +109,43 @@ textarea {
 
 #title {
     margin-bottom: 10px;
+    height: 32px;
 }
 
+.output-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#output-heading {
+    margin-bottom: 15px;
+}
+
+/* Responsive queries */
+
+@media screen and (max-width: 800px) {
+    .form-input > label {
+        white-space: pre;
+    }
+
+    .form-input > input,
+    .form-input > textarea {
+        min-width: 280px;
+    }
+
+    .output {
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form-input > input,
+    .form-input > textarea {
+        min-width: 100%;
+    }
+
+    .output {
+        padding-left: 20px;
+    }
+}
