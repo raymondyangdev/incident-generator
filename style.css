@@ -111,6 +111,7 @@ textarea {
 #title {
     margin-bottom: 10px;
     height: 32px;
+    font-size: medium;
 }
 
 .output-row {
