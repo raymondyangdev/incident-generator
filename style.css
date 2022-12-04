@@ -97,8 +97,20 @@ textarea {
     color: white;
 }
 
+#submitBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgb(0, 165, 0);
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
 #form-reset {
     flex-direction: row;
+    gap: 20px;
 }
 
 /* Outputs */
