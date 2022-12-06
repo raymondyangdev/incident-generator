@@ -1,0 +1,100 @@
+<section>
+    <div class='container'>
+        <form class='form-body'>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='app'>Application:</label>
+                    <input type='text' name='app' id='app' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='issue'>Issue:</label>
+                    <input type='text' name='issue' id='issue' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='error'>Error:</label>
+                    <input type='text' name='error' id='error' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='date'>Approx. Time When Issue Started</label>
+                    <input type='text' name='date' id='date' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='actions-taken'>Actions taken:</label>
+                    <textarea
+                        name='actions-taken'
+                        id='actions-taken'
+                    ></textarea>
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='outcome'>Outcome:</label>
+                    <input type='text' name='outcome' id='outcome' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='name'>Name:</label>
+                    <input type='text' name='name' id='name' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='contact'>Contact:</label>
+                    <input type='text' name='contact' id='contact' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='asset'>Asset:</label>
+                    <input type='text' name='asset' id='asset' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='location'>Location:</label>
+                    <input type='text' name='location' id='location' />
+                </div>
+            </div>
+            <div class='form-row'>
+                <div class='form-input'>
+                    <label for='no-affected'>Number of Colleagues Affected:</label>
+                    <input type='text' name='no-affected' id='no-affected' />
+                </div>
+            </div>
+
+            <div class='form-row' id='form-reset'>
+                <button type='submit' id='submitBtn'>Submit</button>
+                <button type='reset' id='resetBtn'>Reset</button>
+            </div>
+        </form>
+
+        <div class='output'>
+            <h2 id='output-heading'>Output:</h2>
+
+            <div class='output-row'>
+                <label for='title' id='title-output'>Title</label>
+                <input name='title' type='text' id='title' readonly />
+            </div>
+
+            <div class='output-row'>
+                <label for='output'>Work Notes</label>
+                <textarea
+                    name='output'
+                    id='workNotes'
+                    cols='30'
+                    rows='10'
+                    readonly
+                ></textarea>
+            </div>
+        </div>
+    </div>
+</section>
