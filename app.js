@@ -5,9 +5,6 @@ window.addEventListener('load', function () {
         const error = document.querySelector('#error');
         const titleOutput = document.querySelector('#title');
 
-        if (app.value && issue.value) {
-        }
-
         app.addEventListener('input', function () {
             titleOutput.value = `${app.value}`;
         });
