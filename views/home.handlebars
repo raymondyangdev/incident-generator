@@ -73,7 +73,7 @@
 
             <div class='form-row' id='form-reset'>
                 <button type='submit' id='submitBtn'>Submit</button>
-                <button type='reset' id='resetBtn'>Reset</button>
+                <button id='resetBtn'>Reset</button>
             </div>
         </form>
 
@@ -104,6 +104,7 @@
 {{#if form.actions}}Actions taken:
 {{form.actions}}
 {{/if}}
+
 {{#if form.outcome}}Outcome:
 {{form.outcome}}
 {{/if}}
@@ -113,7 +114,7 @@
 {{/if}}{{#if form.location}}Location: {{form.location}}
 {{/if}}
 
-{{#if form.submitted}}Please assist. Thank you.{{/if}}</textarea>
+{{#if form.submitted}}{{form.submitted}}{{/if}}</textarea>
             </div>
         </div>
     </div>
