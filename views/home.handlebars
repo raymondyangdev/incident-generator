@@ -1,6 +1,6 @@
 <section>
     <div class='container'>
-        <form class='form-body'>
+        <form action="./" method="POST" class='form-body'>
             <div class='form-row'>
                 <div class='form-input'>
                     <label for='app'>Application:</label>
@@ -29,7 +29,7 @@
                 <div class='form-input'>
                     <label for='actions-taken'>Actions taken:</label>
                     <textarea
-                        name='actions-taken'
+                        name='actions'
                         id='actions-taken'
                     ></textarea>
                 </div>
@@ -67,7 +67,7 @@
             <div class='form-row'>
                 <div class='form-input'>
                     <label for='no-affected'>Number of Colleagues Affected:</label>
-                    <input type='text' name='no-affected' id='no-affected' />
+                    <input type='text' name='affected' id='no-affected' />
                 </div>
             </div>
 
@@ -82,7 +82,7 @@
 
             <div class='output-row'>
                 <label for='title' id='title-output'>Title</label>
-                <input name='title' type='text' id='title' readonly />
+                <input name='title' type='text' id='title' readonly value="{{#if form.app}}{{form.app}}{{/if}}{{#if form.issue}} - {{form.issue}}{{/if}}{{#if form.error}} - {{form.error}}{{/if}}"/>
             </div>
 
             <div class='output-row'>
@@ -93,7 +93,27 @@
                     cols='30'
                     rows='10'
                     readonly
-                ></textarea>
+                >{{#if form.app}}Application: {{form.app}}
+{{/if}}{{#if form.issue}}Issue: {{form.issue}}
+{{/if}}{{#if form.error}}Error: {{form.error}}
+{{/if}}{{#if form.date}}Approx. Time When Issue Started: {{form.date}}
+{{/if}}
+{{#if form.affected}}Number of Colleagues Affected: {{form.affected}}
+{{/if}}
+
+{{#if form.actions}}Actions taken:
+{{form.actions}}
+{{/if}}
+{{#if form.outcome}}Outcome:
+{{form.outcome}}
+{{/if}}
+{{#if form.name}}Name: {{form.name}}
+{{/if}}{{#if form.contact}}Contact: {{form.contact}}
+{{/if}}{{#if form.asset}}Asset: {{form.asset}}
+{{/if}}{{#if form.location}}Location: {{form.location}}
+{{/if}}
+
+{{#if form.submitted}}Please assist. Thank you.{{/if}}</textarea>
             </div>
         </div>
     </div>
