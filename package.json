@@ -17,6 +17,7 @@
     },
     "homepage": "https://github.com/raymondyangdev/incident-generator#readme",
     "dependencies": {
+        "clipboard": "^2.0.11",
         "express": "^4.18.2",
         "express-handlebars": "^5.3.4"
     }
