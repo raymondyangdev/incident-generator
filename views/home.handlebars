@@ -83,22 +83,25 @@
 {{/if}}
 {{#if form.affected}}Number of Colleagues Affected: {{form.affected}}
 {{/if}}
+{{#if form.actions}}
 
-{{#if form.actions}}Actions taken:
-{{form.actions}}
-{{/if}}
+Actions taken:
+{{form.actions}}{{/if}}
+{{#if form.outcome}}
 
-{{#if form.outcome}}Outcome:
+Outcome:
 {{form.outcome}}
-
 {{/if}}
-{{#if form.name}}Name: {{form.name}}
+{{#if form.name}}
+
+Name: {{form.name}}
 {{/if}}{{#if form.contact}}Contact: {{form.contact}}
 {{/if}}{{#if form.asset}}Asset: {{form.asset}}
 {{/if}}{{#if form.location}}Location: {{form.location}}
 {{/if}}
+{{#if form.submitted}}
 
-{{#if form.submitted}}{{form.submitted}}{{/if}}</textarea>
+{{form.submitted}}{{/if}}</textarea>
             </div>
             <button class="copy work-notes-copy" data-clipboard-target="#work-notes"><span class="material-icons">
                     content_copy
