@@ -1,100 +1,79 @@
-<section>
-    <div class='container'>
-        <form action="./" method="POST" class='form-body'>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='app'>Application:</label>
-                    <input type='text' name='app' id='app' />
-                </div>
+<section class="container">
+
+    <div class='wrapper'>
+        <form action="./" method="POST">
+
+            <div class='form'>
+                <label for='app'>Application:</label>
+                <input type='text' name='app' id='app' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='issue'>Issue:</label>
-                    <input type='text' name='issue' id='issue' />
-                </div>
+            <div class='form'>
+                <label for='issue'>Issue:</label>
+                <input type='text' name='issue' id='issue' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='error'>Error:</label>
-                    <input type='text' name='error' id='error' />
-                </div>
+            <div class='form'>
+                <label for='error'>Error:</label>
+                <input type='text' name='error' id='error' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='date'>Approx. Time When Issue Started</label>
-                    <input type='text' name='date' id='date' />
-                </div>
+            <div class='form'>
+                <label for='date'>Approx. time when issue started:</label>
+                <input type='text' name='date' id='date' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='actions-taken'>Actions taken:</label>
-                    <textarea
-                        name='actions'
-                        id='actions-taken'
-                    ></textarea>
-                </div>
+            <div class='form'>
+                <label for='actions-taken'>Action taken:</label>
+                <textarea name='actions' id='actions-taken'></textarea>
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='outcome'>Outcome:</label>
-                    <input type='text' name='outcome' id='outcome' />
-                </div>
+            <div class='form'>
+                <label for='outcome'>Outcome:</label>
+                <input type='text' name='outcome' id='outcome' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='name'>Name:</label>
-                    <input type='text' name='name' id='name' />
-                </div>
+            <div class='form'>
+                <label for='name'>Name:</label>
+                <input type='text' name='name' id='name' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='contact'>Contact:</label>
-                    <input type='text' name='contact' id='contact' />
-                </div>
+            <div class='form'>
+                <label for='contact'>Contact:</label>
+                <input type='text' name='contact' id='contact' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='asset'>Asset:</label>
-                    <input type='text' name='asset' id='asset' />
-                </div>
+            <div class='form'>
+                <label for='asset'>Asset:</label>
+                <input type='text' name='asset' id='asset' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='location'>Location:</label>
-                    <input type='text' name='location' id='location' />
-                </div>
+            <div class='form'>
+                <label for='location'>Location:</label>
+                <input type='text' name='location' id='location' />
             </div>
-            <div class='form-row'>
-                <div class='form-input'>
-                    <label for='no-affected'>Number of Colleagues Affected:</label>
-                    <input type='text' name='affected' id='no-affected' />
-                </div>
+            <div class='form'>
+                <label for='no-affected'>Number of colleagues affected:</label>
+                <input type='text' name='affected' id='no-affected' />
             </div>
 
-            <div class='form-row' id='form-reset'>
+            <div class="button">
                 <button type='submit' id='submitBtn'>Submit</button>
                 <button id='resetBtn'>Reset</button>
             </div>
         </form>
+    </div>
 
-        <div class='output'>
-            <h2 id='output-heading'>Output:</h2>
-
-            <div class='output-row'>
-                <label for='title' id='title-output'>Title</label>
-                <input name='title' type='text' id='title' readonly value="{{#if form.app}}{{form.app}}{{/if}}{{#if form.issue}} - {{form.issue}}{{/if}}{{#if form.error}} - {{form.error}}{{/if}}"/>
-                <button class="copy" data-clipboard-target="#title">Copy</button>
+    <div class='wrapper'>
+        <div class="flex-column">
+            <div class="output-container">
+                <label for='title' id='title-output'>Short description</label>
+                <div class="flex">
+                    <div class='form'>
+                        <input name='title' type='text' id='title' readonly
+                            value="{{#if form.app}}{{form.app}}{{/if}}{{#if form.issue}} - {{form.issue}}{{/if}}{{#if form.error}} - {{form.error}}{{/if}}" />
+                    </div>
+                    <button class="copy" data-clipboard-target="#title"><span class="material-icons">
+                            content_copy
+                        </span>
+                    </button>
+                </div>
             </div>
 
-            <div class='output-row'>
-                <label for='output'>Work Notes</label>
-                <textarea
-                    name='output'
-                    id='workNotes'
-                    cols='30'
-                    rows='10'
-                    readonly
-                >{{#if form.app}}Application: {{form.app}}
+            <div class='form' id="output-form">
+                <label for='output'>Work notes</label>
+                <textarea name='output' id='work-notes' cols='30' rows='10' readonly>{{#if form.app}}Application: {{form.app}}
 {{/if}}{{#if form.issue}}Issue: {{form.issue}}
 {{/if}}{{#if form.error}}Error: {{form.error}}
 {{/if}}{{#if form.date}}Approx. Time When Issue Started: {{form.date}}
@@ -108,6 +87,7 @@
 
 {{#if form.outcome}}Outcome:
 {{form.outcome}}
+
 {{/if}}
 {{#if form.name}}Name: {{form.name}}
 {{/if}}{{#if form.contact}}Contact: {{form.contact}}
@@ -116,16 +96,20 @@
 {{/if}}
 
 {{#if form.submitted}}{{form.submitted}}{{/if}}</textarea>
-<button class="copy" data-clipboard-target="#workNotes">Copy</button>
-
-        <script
-            src='https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js'
-        ></script>
-
-        <script>
-            const clipboard = new ClipboardJS('.copy');
-        </script>
             </div>
+            <button class="copy work-notes-copy" data-clipboard-target="#workNotes"><span class="material-icons">
+                    content_copy
+                </span></button>
+
+            <script src='https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js'></script>
+
+            <script>
+                    = new ClipboardJS('.copy');
+                    </script>
+
         </div>
+
+    </div>
+
     </div>
 </section>

@@ -14,6 +14,8 @@ body {
             rgba(0, 174, 255, 1) 100%
         )
         fixed;
+
+    min-height: 100vh;
 }
 
 .container {
@@ -27,12 +29,46 @@ body {
     grid-template-columns: 1fr 1fr;
 }
 
+label {
+    padding-bottom: 3px;
+}
+
+.wrapper {
+    padding: 12px 40px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex button span {
+    font-size: 19px;
+}
+
+.flex button {
+    align-self: center;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+}
+
 /* Nav */
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 10px 45px 10px 15px;
+    padding: 0 45px;
+    height: 24px;
 }
 
 #brand {
@@ -49,112 +85,68 @@ li {
 }
 
 /* Form */
-.form-row {
+
+.form {
     display: flex;
     flex-direction: column;
-}
-
-.form-input {
-    display: flex;
-    flex-direction: column;
-    padding-top: 5px;
-}
-
-label {
-    padding-bottom: 3px;
-}
-
-input {
-    height: 23px;
-    font-size: large;
-}
-
-.form-input > input,
-.form-input > textarea {
-    min-width: 200px;
+    margin: 4px 0;
+    flex: 1;
 }
 
 input,
 textarea {
-    max-width: 70%;
-    padding: 3px 0 0 4px;
+    padding: 3px 4px;
     border-radius: 5px;
     border: none;
+    resize: none;
 }
 
-textarea {
-    height: 128px;
+.form input {
+    max-width: 512px;
+    height: 23px;
+    font-size: large;
+}
+
+.form textarea {
+    max-width: 512px;
+    flex-basis: 128px;
+}
+
+#resetBtn, #submitBtn {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: white;
 }
 
 #resetBtn {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 3px;
     background-color: red;
-    border: none;
-    cursor: pointer;
-    color: white;
 }
 
 #submitBtn {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 5px;
-    border-radius: 3px;
     background-color: rgb(0, 165, 0);
-    border: none;
-    cursor: pointer;
-    color: white;
 }
 
-#form-reset {
-    flex-direction: row;
-    gap: 20px;
-}
-
-/* Outputs */
-.output {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/* Output */
 
 #title {
-    margin-bottom: 10px;
-    height: 32px;
-    font-size: medium;
+    border-radius: 5px 0 0 5px;
 }
 
-.output-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.form#output-form {
+    margin: 0;
 }
 
-#output-heading {
-    margin-bottom: 15px;
+#work-notes {
+    flex: 0 1 450px;
+    border-radius: 5px 5px 0 0;
 }
 
-/* Responsive queries */
-
-@media screen and (max-width: 1200px) {
-    .form-input > label {
-        white-space: pre;
-    }
-
-    .form-input > input,
-    .form-input > textarea {
-        min-width: 280px;
-    }
-
-    .output {
-        margin-left: 20px;
-    }
-
-    .output-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.flex-column .work-notes-copy {
+    border-radius: 0 0 5px 5px;
+    border: none;
+    cursor: pointer;
 }
