@@ -97,14 +97,14 @@
 
 {{#if form.submitted}}{{form.submitted}}{{/if}}</textarea>
             </div>
-            <button class="copy work-notes-copy" data-clipboard-target="#workNotes"><span class="material-icons">
+            <button class="copy work-notes-copy" data-clipboard-target="#work-notes"><span class="material-icons">
                     content_copy
                 </span></button>
 
             <script src='https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js'></script>
 
             <script>
-                    = new ClipboardJS('.copy');
+                        const clipboard = new ClipboardJS('.copy');
                     </script>
 
         </div>
