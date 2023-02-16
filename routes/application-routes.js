@@ -18,6 +18,7 @@ router.post('/', function (req, res) {
         asset: req.body.asset,
         location: req.body.location,
         affected: req.body.affected,
+        submitted: req.body.pleaseAssistTy,
     };
 
     res.locals.form = form;

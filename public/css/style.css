@@ -150,3 +150,7 @@ textarea {
     border: none;
     cursor: pointer;
 }
+
+#please-assist-ty {
+    display: none;
+}
